@@ -16,3 +16,20 @@
     /* background-color: #e7e0e0;
     border: 1px solid #ccc; */
 }
+
+.centered-text-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px; /* Set the desired height of your container */
+    width: 500px;
+    /* Optional: Add other styles like border for better visualization */
+    border: 1px solid #ccc;
+    margin: auto;
+  }
+
+  .centered-text {
+    text-align: center;
+    background-color: #f0f0f0; /* Set the background color for the text */
+    padding: 10px; /* Optional: Add padding for better visual appeal */
+  }
