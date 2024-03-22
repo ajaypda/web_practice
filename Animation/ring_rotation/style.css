@@ -5,7 +5,7 @@ body
 
 .container
 {
-    border-left: 10px solid rgb(239, 188, 188);
+    border-left: 10px dotted rgb(239, 188, 188);
     width:300px;
     height: 300px;
     display:flex;
@@ -14,7 +14,7 @@ body
     margin: auto;
     animation-name: animate;
     animation-iteration-count: infinite;
-    animation-duration: 2s;
+    animation-duration: 1s;
     border-radius: 50%;
     margin-top: 100px;
     animation-timing-function:linear;
@@ -22,7 +22,7 @@ body
 
 .ring
 {
-    border-left: 8px solid rgb(240, 110, 110);
+    border-right: 8px dotted rgb(240, 110, 110);
     width:200px;
     height: 200px;
     display:flex;
@@ -31,14 +31,14 @@ body
     margin: 10px 10px 10px 10px;
     animation-name: animate1;
     animation-iteration-count: infinite;
-    animation-duration: 1s;
+    animation-duration: 0.5s;
     border-radius: 50%;
     animation-timing-function:linear;
 }
 
 .cring
 {
-    border-left: 6px solid rgb(238, 75, 75);
+    border-left: 6px dotted rgb(238, 75, 75);
     width:100px;
     height: 100px;
     display:flex;
@@ -47,14 +47,14 @@ body
     margin: 10px 10px 10px 10px;
     animation-name: animate;
     animation-iteration-count: infinite;
-    animation-duration: 1s;
+    animation-duration: 0.6s;
     border-radius: 50%;
     animation-timing-function:linear;
 }
 
 .core
 {
-    border-left: 4px solid rgb(248, 3, 3);
+    border-right: 4px dotted rgb(248, 3, 3);
     width:50px;
     height: 50px;
     display:flex;
@@ -63,26 +63,27 @@ body
     margin: 10px 10px 10px 10px;
     animation-name: animate1;
     animation-iteration-count: infinite;
-    animation-duration: 1s;
+    animation-duration: 0.5s;
     border-radius: 50%;
     animation-timing-function:linear;
 }
 
-.c
+/* .c
 {
-    width:10px;
-    height: 10px;
+    border-left: 2px dotted rgb(248, 3, 3);
+    width:20px;
+    height: 20px;
     display:flex;
     justify-content: center;
     align-items: center;
     margin: 10px 10px 10px 10px;
-    animation-name: animate2;
+    animation-name: animate;
     animation-iteration-count: infinite;
-    animation-duration: 1s;
+    animation-duration: 0.4s;
     border-radius: 50%;
     animation-timing-function:linear;
-    background-color: rgb(244, 4, 4);
-}
+
+} */
 
 @keyframes animate {
     0%{
@@ -103,13 +104,31 @@ body
     }
 }
 
-@keyframes animate2 {
+/* @keyframes animate2 {
     0%{
         background-color: rgb(244, 4, 4);
     }
     100%{
         background-color: rgb(236, 228, 228);
     }
+} */
+
+.container:hover{
+    width:400px;
+    height:400px;
 }
 
+.container:hover .ring {
+    width: 300px; /* Change width of .ring on hover */
+    height: 300px; /* Change height of .ring on hover */
+}
 
+.container:hover .cring {
+    width: 200px; /* Change width of .cring on hover */
+    height: 200px; /* Change height of .cring on hover */
+}
+
+.container:hover .core {
+    width: 100px; /* Change width of .core on hover */
+    height: 100px; /* Change height of .core on hover */
+}
