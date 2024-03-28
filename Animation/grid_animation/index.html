@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Horizontal Gradient</title>
+<style>
+    body, html {
+    margin: 0;
+    height: 100%;
+    }
+
+    body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black; /* Set background color here */
+    }
+
+    .container{
+        display: flex;
+        width: 500px;
+        height: 500px;
+        border-radius: 50%;
+        animation: anim1 5s linear 1s infinite;
+    }
+
+    .gradient {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        animation: anim 5s linear 1s infinite;
+    }
+
+    .g2{
+        animation: anim2 5s linear 1s infinite;
+    }
+    @keyframes anim {
+        0% {
+            background: linear-gradient(0deg, #ff7e5f, #feb47b);
+        }
+        25% {
+            background: linear-gradient(90deg, #6666b4, #feb47b);
+        }
+        50% {
+            background: linear-gradient(180deg, #ff7e5f, #95fe7b);
+        }
+        75% {
+            background: linear-gradient(270deg, #0e5b20, #feb47b);
+        }
+        100% {
+            background: linear-gradient(360deg, #ff7e5f, #feb47b);
+        }
+    }
+
+    @keyframes anim2 {
+        0% {
+            background: linear-gradient(360deg, #e61f39, #feb47b);
+        }
+        25% {
+            background: linear-gradient(270deg, #0e5b20, #feb47b);
+        }
+        50% {
+            background: linear-gradient(180deg, #ff7e5f, #95fe7b);
+        }
+        75% {
+            background: linear-gradient(90deg, #6666b4, #feb47b);
+        }
+        100% {
+            background: linear-gradient(0deg, #b73414, #e6e92c);
+        }
+    }
+
+    @keyframes anim1 {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+</style>
+</head>
+<body>
+    <div class="container">
+    <div class="gradient g1" > </div>
+    <div class="gradient g2"> </div>
+    </div>
+</body>
+</html>
