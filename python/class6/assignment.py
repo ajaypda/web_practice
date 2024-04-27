@@ -41,3 +41,20 @@ nconf1 =NetworkConfig(22, 15)
 print("Server address:", nconf1.SERVER_ADDRESS)
 print("Port:", nconf1.port)
 print("timeout:", nconf1.timeout)
+
+# requests practice
+
+from requests import get
+HTTP_STATUS_OK = 200
+
+url = "https://api.dictionaryapi.dev/api/v2/entries/en/"
+word ="happy"
+
+# Send a GET request
+response = get(url + word)
+
+if response.status_code == HTTP_STATUS_OK:
+    # Print the response content
+    print(response.text)
+else:
+    print("Error:", response.status_code)
