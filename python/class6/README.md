@@ -39,3 +39,36 @@ if response.status_code == HTTP_STATUS_OK:
 else:
     print("Error:", response.status_code)
 ```
+
+## static variable:
+
+```
+DA00046:class6 ajayp$ cat test.py
+
+class Test:
+    COUNT = 0
+
+    def __init__(self, name, age):
+        self.name=name
+        self.age=age
+
+DA00046:class6 ajayp$ python3
+Python 3.10.8 (main, Oct 13 2022, 10:17:43) [Clang 14.0.0 (clang-1400.0.29.102)] on darwin
+Type "help", "copyright", "credits" or "license" for more information.
+>>> from test import Test
+>>> t = Test("Rahul", 42)
+>>> t.__dict__
+{'name': 'Rahul', 'age': 42}
+>>> t.COUNT
+0
+>>> t.__dict__
+{'name': 'Rahul', 'age': 42}
+>>> t.COUNT = 5
+>>> t.__dict__
+{'name': 'Rahul', 'age': 42, 'COUNT': 5}
+>>> t.COUNT
+5
+>>> Test.COUNT
+0
+>>>
+```
