@@ -80,6 +80,7 @@ def stock(request):
             context["character"] = character
             context["price"] = price
             context["header"] = header
+            context["title"] = "character:" + character + "#" + "price:" + price
             for data in stock_info:
                 if character.lower() in data["name"].lower() and float(price) <= data["market_price"]:
                     context["stock"].append(data)
