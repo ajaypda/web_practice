@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Copies</title>
+</head>
+<body>
+    {% if copies %}
+        <h1>Copies</h1>
+        <ul>
+            {% for copy in copies %}
+                <li><a href="{% url 'copy-detail' copy.pk %}">{{ copy }}</a></li>
+            {% endfor %}
+        </ul>
+    {% elif copy %}
+        <h1>{{ copy }}</h1>
+        <p>Book: {{ copy.book.title }}</p>
+        <p>Copy Number: {{ copy.copy_number }}</p>
+        <!-- Add other fields related to Copy model as needed -->
+    {% else %}
+        <p>No data available.</p>
+    {% endif %}
+</body>
+</html>

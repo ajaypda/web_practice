@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Library</title>
+</head>
+<body>
+    {% if libraries %}
+        <h1>Libraries</h1>
+        <ul>
+            {% for library in libraries %}
+                <li><a href="{% url 'library-detail' library.pk %}">{{ library.name }}</a></li>
+            {% endfor %}
+        </ul>
+    {% elif library %}
+        <h1>{{ library.name }}</h1>
+        <p>Address: {{ library.address.street }}, {{ library.address.city }}, {{ library.address.state }} {{ library.address.zip_code }}</p>
+    {% else %}
+        <p>No data available.</p>
+    {% endif %}
+</body>
+</html>

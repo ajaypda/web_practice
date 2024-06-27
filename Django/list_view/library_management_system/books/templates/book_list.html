@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Book</title>
+</head>
+<body>
+    {% if books %}
+        <h1>Books</h1>
+        <ul>
+            {% for book in books %}
+                <li><a href="{% url 'book-detail' book.pk %}">{{ book.title }}</a></li>
+            {% endfor %}
+        </ul>
+    {% elif book %}
+        <h1>{{ book.title }}</h1>
+        <p>Author: {{ book.author }}</p>
+        <p>Library: <a href="{% url 'library-detail' book.library.pk %}">{{ book.library.name }}</a></p>
+    {% else %}
+        <p>No data available.</p>
+    {% endif %}
+</body>
+</html>
+
